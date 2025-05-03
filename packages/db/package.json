@@ -1,0 +1,30 @@
+{
+	"name": "@ustack/db",
+	"main": "src/index.ts",
+	"type": "module",
+	"scripts": {
+		"dev": "bun run env drizzle-kit studio",
+		"push": "bun run env drizzle-kit push",
+		"generate": "bun run env:prod drizzle-kit generate",
+		"migrate": "bun run env:prod drizzle-kit migrate",
+		"studio:prod": "bun run env:prod drizzle-kit studio",
+		"env:prod": "bun dotenvx run -f .env.production.local --",
+		"env": "bun dotenvx run -f .env.development.local --"
+	},
+	"devDependencies": {
+		"@types/bun": "latest",
+		"drizzle-kit": "^0.31.0",
+		"tsx": "^4.19.3"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"@dotenvx/dotenvx": "^1.41.0",
+		"@neondatabase/serverless": "^1.0.0",
+		"@tiptap/react": "^2.11.7",
+		"drizzle-orm": "^0.43.1",
+		"drizzle-zod": "^0.7.1",
+		"nanoid": "^5.1.5"
+	}
+}

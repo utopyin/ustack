@@ -1,0 +1,27 @@
+{
+	"name": "ustack",
+	"private": true,
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"lint": "biome lint --write",
+		"format": "biome format --write",
+		"check-types": "turbo run check-types",
+		"init": "bun run ./init.ts",
+		"setup-env": "bun run ./scripts/setup-env.ts"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@clack/prompts": "^0.10.1",
+		"@types/prompts": "^2.4.9",
+		"kleur": "^4.1.5",
+		"prettier": "^3.5.3",
+		"turbo": "^2.5.2",
+		"typescript": "5.8.2"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"packageManager": "bun@1.2.10",
+	"workspaces": ["apps/*", "packages/*", "services/*"]
+}
