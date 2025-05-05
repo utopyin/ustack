@@ -27,7 +27,10 @@
 			"public",
 			"routeTree.gen.ts",
 			"bun.lock",
-			"bun.lockb"
+			"bun.lockb",
+			"mobile/ios",
+			"mobile/android",
+			".wrangler"
 		],
 		"ignoreUnknown": false
 	},
