@@ -68,7 +68,7 @@ async function deleteTemplate() {
 async function createEnvFiles({ dbUrl }: { dbUrl: string }) {
 	for (const dir of ["./apps/mobile/", "./apps/web/"]) {
 		await copyFile(
-			`${dir}/.env.example`,
+			`${dir}/.env.example.local`,
 			`${dir}/.env.development.local`,
 			constants.COPYFILE_EXCL,
 		).catch((error) => {
