@@ -1,10 +1,12 @@
 import { Image } from "expo-image";
-import { Platform, StyleSheet } from "react-native";
+import { Button, Platform, StyleSheet } from "react-native";
 
 import { HelloWave } from "@/src/components/HelloWave";
 import ParallaxScrollView from "@/src/components/ParallaxScrollView";
 import { ThemedText } from "@/src/components/ThemedText";
 import { ThemedView } from "@/src/components/ThemedView";
+import { service } from "@/src/lib/service";
+import { Link } from "expo-router";
 
 export default function HomeScreen() {
 	return (
@@ -17,6 +19,23 @@ export default function HomeScreen() {
 			<ThemedView style={styles.titleContainer}>
 				<ThemedText type="title">Welcome!</ThemedText>
 				<HelloWave />
+				<Link href="/sign-in">Sign in</Link>
+
+				<Button
+					title="Test"
+					onPress={async () => {
+						const res =
+							await service.rpcClient.users.me.$get(
+								// {},
+								// {
+								// 	init: { credentials: "include" },
+								// },
+							);
+						const json = await res.json();
+						console.log(json);
+					}}
+				/>
+				<Button title="Sign out" onPress={() => service.authClient.signOut()} />
 			</ThemedView>
 			<ThemedView style={styles.stepContainer}>
 				<ThemedText type="subtitle">Step 1: Try it</ThemedText>

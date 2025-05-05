@@ -1,17 +1,26 @@
+import { useRouter } from "expo-router";
 import { useState } from "react";
 import { Button, TextInput, View } from "react-native";
-import { authClient } from "../lib/auth-client";
+import { service } from "../lib/service";
 
 export default function App() {
+	const router = useRouter();
+	const { data: auth, isPending } = service.authClient.useSession();
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
 	const handleLogin = async () => {
-		await authClient.signIn.email({
-			email,
-			password,
+		await service.authClient.signIn.social({
+			provider: "google",
+			requestSignUp: true,
+			callbackURL: "/explore",
 		});
 	};
+
+	console.log("auth", auth);
+	if (!isPending && auth !== null) {
+		router.replace("/explore");
+	}
 
 	return (
 		<View>

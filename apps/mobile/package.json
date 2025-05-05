@@ -3,7 +3,7 @@
 	"main": "expo-router/entry",
 	"version": "1.0.0",
 	"scripts": {
-		"start": "expo run:ios",
+		"dev": "expo run:ios --device",
 		"reset-project": "node ./scripts/reset-project.js",
 		"android": "expo run:android",
 		"ios": "expo run:ios",
@@ -11,17 +11,18 @@
 		"lint": "expo lint"
 	},
 	"dependencies": {
-		"@ustack/service": "workspace:*",
 		"@better-auth/expo": "^1.2.7",
 		"@expo/vector-icons": "^14.1.0",
 		"@react-navigation/bottom-tabs": "^7.3.10",
 		"@react-navigation/elements": "^2.3.8",
 		"@react-navigation/native": "^7.1.6",
+		"@ustack/service": "workspace:*",
 		"better-auth": "^1.2.7",
 		"expo": "~53.0.4",
 		"expo-asset": "~11.1.4",
 		"expo-blur": "~14.1.4",
 		"expo-constants": "~17.1.5",
+		"expo-dev-client": "~5.1.8",
 		"expo-font": "~13.3.0",
 		"expo-haptics": "~14.1.4",
 		"expo-image": "~2.1.6",

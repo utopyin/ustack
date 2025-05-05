@@ -8,15 +8,15 @@ type Auth = ReturnType<typeof auth>;
 export const authed = createMiddleware<
 	Env & {
 		Variables: {
-			user: Auth["$Infer"]["Session"]["user"] | null;
-			session: Auth["$Infer"]["Session"]["session"] | null;
+			user: Auth["$Infer"]["Session"]["user"];
+			session: Auth["$Infer"]["Session"]["session"];
 		};
 	}
 >(async (c, next) => {
 	const session = await auth(c).api.getSession({ headers: c.req.raw.headers });
 
 	if (!session) {
-		return c.json({ CODE: "UNAUTHORIZED" } as const, 401);
+		return c.json({ code: "UNAUTHORIZED" } as const, 401);
 	}
 
 	c.set("user", session.user);

@@ -1,10 +1,7 @@
 {
 	"name": "@ustack/service",
-	"exports": {
-		".": "./src/index.ts",
-		"./users": "./src/users.ts",
-		"./error": "./src/error.ts"
-	},
+	"main": "./src/index.ts",
+
 	"type": "module",
 	"private": true,
 	"devDependencies": {
@@ -15,8 +12,9 @@
 	},
 	"dependencies": {
 		"@tanstack/react-query": "^5.75.1",
+		"@ustack/api": "workspace:*",
+		"better-auth": "^1.2.7",
 		"hono": "^4.7.8",
-		"neverthrow": "^8.2.0",
-		"@ustack/api": "workspace:*"
+		"neverthrow": "^8.2.0"
 	}
 }

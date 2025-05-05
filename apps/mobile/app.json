@@ -1,59 +1,62 @@
 {
-	"expo": {
-		"name": "ustack",
-		"slug": "ustack",
-		"version": "1.0.0",
-		"orientation": "portrait",
-		"icon": "./assets/images/icon.png",
-		"scheme": "ustack",
-		"userInterfaceStyle": "automatic",
-		"newArchEnabled": true,
-		"ios": {
-			"supportsTablet": true
-		},
-		"android": {
-			"adaptiveIcon": {
-				"foregroundImage": "./assets/images/adaptive-icon.png",
-				"backgroundColor": "#ffffff"
-			},
-			"edgeToEdgeEnabled": true
-		},
-		"web": {
-			"bundler": "metro",
-			"output": "static",
-			"favicon": "./assets/images/favicon.png"
-		},
-		"plugins": [
-			"expo-router",
-			[
-				"expo-splash-screen",
-				{
-					"image": "./assets/images/splash-icon.png",
-					"imageWidth": 200,
-					"resizeMode": "contain",
-					"backgroundColor": "#ffffff"
-				}
-			],
-			"expo-web-browser",
-			[
-				"expo-asset",
-				{
-					"assets": [
-						"./assets/images/adaptive-icon.png",
-						"./assets/images/favicon.png",
-						"./assets/images/icon.png",
-						"./assets/images/partial-react-logo.png",
-						"./assets/images/react-logo.png",
-						"./assets/images/react-logo@2x.png",
-						"./assets/images/react-logo@3x.png",
-						"./assets/images/splash-icon.png"
-					]
-				}
-			],
-			"expo-secure-store"
-		],
-		"experiments": {
-			"typedRoutes": true
-		}
-	}
+  "expo": {
+    "name": "ustack",
+    "slug": "ustack",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "ustack",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.442utopy.ustack",
+      "appleTeamId": "Z9JJ68Y33L"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      "expo-web-browser",
+      [
+        "expo-asset",
+        {
+          "assets": [
+            "./assets/fonts/SpaceMono-Regular.ttf",
+            "./assets/images/adaptive-icon.png",
+            "./assets/images/favicon.png",
+            "./assets/images/icon.png",
+            "./assets/images/partial-react-logo.png",
+            "./assets/images/react-logo.png",
+            "./assets/images/react-logo@2x.png",
+            "./assets/images/react-logo@3x.png",
+            "./assets/images/splash-icon.png"
+          ]
+        }
+      ],
+      "expo-secure-store"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
 }

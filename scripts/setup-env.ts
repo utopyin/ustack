@@ -88,7 +88,7 @@ async function createEnvFiles({ dbUrl }: { dbUrl: string }) {
 
 	await writeFile(
 		`./services/api/.dev.vars`,
-		`BETTER_AUTH_SECRET=${secret}\rDATABASE_URL=${dbUrl}`,
+		`BETTER_AUTH_SECRET=${secret}\rDATABASE_URL=${dbUrl}\rGOOGLE_CLIENT_ID=\rGOOGLE_CLIENT_SECRET=`,
 		{ flag: "wx" },
 	).catch((error) => {
 		console.log(error.message);

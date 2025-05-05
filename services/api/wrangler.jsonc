@@ -7,13 +7,15 @@
     "production": {
       "vars": {
         "WORKER_ENV": "production",
-        "ORIGIN": "https://ustack.com"
+        "ORIGIN": "https://ustack.com",
+        "BASE_URL": "https://api.ustack.com"
       }
     },
     "development": {
       "vars": {
         "WORKER_ENV": "development",
-        "ORIGIN": "https://dev.gourmett.app"
+        "ORIGIN": "https://dev.gourmett.app",
+        "BASE_URL": "https://devapi.gourmett.app"
       }
     }
   }

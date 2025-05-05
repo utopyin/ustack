@@ -1,9 +1,9 @@
-import { Hono } from "hono";
-import { Env } from "..";
-import { authed } from "../middlewares/authed";
 import { schema } from "@ustack/db";
 import { eq } from "drizzle-orm";
+import { Hono } from "hono";
+import { Env } from "..";
 import { getUserDTO } from "../dto";
+import { authed } from "../middlewares/authed";
 
 export const usersRoutes = new Hono<Env>().get("/me", authed, async (c) => {
 	const db = c.var.db();

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, TextInput, View } from "react-native";
-import { authClient } from "../lib/auth-client";
+import { authClient } from "../lib/service";
 
 export default function App() {
 	const [email, setEmail] = useState("");
